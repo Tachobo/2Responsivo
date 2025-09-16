@@ -1,0 +1,66 @@
+body {
+margin: 0;
+font-family: cursive;
+background-color: rgba(194, 25, 2, 0.452);
+text-align: center;
+padding: 20px;
+}
+
+.box{
+background: rgb(0, 0, 0);
+color: white;
+padding: 20px;
+border-radius: 10px;
+margin: auto;
+width: 40%;
+}
+
+.btn-volver {
+  display: inline-block; 
+  padding: 10px 20px; /* separa el contenido del boton de su borde */
+  margin-top: 5px;  /* separa el boton de la caja de arriba */
+  background-color: rgba(2, 2, 2, 0.26); /* color del boton */
+  color: white; /* color del texto */
+  text-decoration: none; /* quita el subrayado de abajo */
+  border-radius: 8px; /* curva las esquinas */ 
+  font-weight: bold; /* el texto se pone en negrita */
+  transition: background-color 0.3s ease; /* cambia de color al pasar el cursor */
+}
+
+.btn-volver:hover {
+  background-color: rgb(71, 52, 49); /* cambia por este color al pasar el cursor */
+}
+
+/* desktop first */
+@media(max-width: 1200px){
+    body{
+        background-color: rgb(9, 130, 211);
+    } 
+    .box{
+        width: 50%;
+        background: orangered;
+        color:white; 
+    }
+}
+
+@media (max-width: 992px){
+    body {
+        background-color: rgb(25, 139, 44);
+    }
+    .box {
+        width: 70%;
+        background: rgb(230, 149, 56);
+        color:aqua;
+    }
+}
+
+@media (max-width:768px){
+    body {
+        background-color: rgb(174, 184, 119);
+    }
+    .box {
+        width: 90%;
+        background:rgb(127, 47, 255);
+        color:rgb(0, 255, 255);
+    }
+}

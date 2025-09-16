@@ -1,0 +1,62 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.menu {
+  background-color: #641818; /* Fondo del menú */
+}
+
+.menu ul {
+  padding: 0;
+  margin: 0;
+  text-align: center; /* Centrar los elementos del menú */
+}
+
+.menu li {
+  display: block; /* los enlaces aparecen en fila, uno al lado del otro */
+}
+
+.menu a {
+  display: block; /* Cada enlace ocupa toda la línea quedando uno junto al otro*/
+  padding: 10px;
+  text-decoration: none; /* quita el subrayado de los enlaces */
+  color: white;
+}
+
+/* Efecto hover (cuando se pasa el mouse) */
+.menu a:hover {
+  background-color: #426418;
+}
+
+header {
+  text-align: center;
+}
+
+.btn-volver {
+  display: inline-block; 
+  padding: 10px 20px; /* separa el contenido del boton de su borde */
+  margin-top: 5px;  /* separa el boton de la caja de arriba */
+  background-color: rgba(2, 2, 2, 0.26); /* color del boton */
+  color: white; /* color del texto */
+  text-decoration: none; /* quita el subrayado de abajo */
+  border-radius: 8px; /* curva las esquinas */ 
+  font-weight: bold; /* el texto se pone en negrita */
+  transition: background-color 0.3s ease; /* cambia de color al pasar el cursor */
+}
+
+.btn-volver:hover {
+  background-color: rgb(71, 52, 49); /* cambia por este color al pasar el cursor */
+}
+
+/* A partir de 1px a 767px se aplican los siguientes cambios */
+@media (min-width: 768px) {
+  .menu li {
+    display: inline-block; /* Ahora los enlaces se colocan en columna, uno de bajo del otro */
+    border: none; /* Quita la línea divisoria de abajo */
+  }
+
+  .menu a {
+    padding: 10px 50px; /* Más espacio de lado a lado, y arriba a abajo */
+  }
+}

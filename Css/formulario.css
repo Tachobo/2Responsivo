@@ -1,0 +1,225 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background-image: url('../Img/winter.png');
+  background-size: cover; /* hace que la imagen cubra todo el fondo */
+  background-position: center; /* centra la imagen */
+  background-repeat: no-repeat; /* evita que la imagen se repita */
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+form {    
+  margin: 0 auto;
+  margin-top: 30px;
+  width: 600px;
+  background-color: aquamarine;
+  padding-bottom: 30px;
+}
+
+label::before {
+  content: "🍗";
+  margin-right: 10px; /*Hace una separacion entre el icono y el texto*/
+  font-size: 20px; /*Aumenta el tamaño del icono*/
+}
+
+a::before {
+  content: "🍕";
+  margin-right: 6px;
+}
+
+form:has(#datos:checked) label[for="datos"] {
+  color: white;
+}
+
+form:has(#datos:checked) {
+  background-color: lightcoral;
+}
+
+#datos {
+  margin-top: 8px;  
+  margin-bottom: 20px; 
+}
+
+label:only-of-type {
+  color: rgb(238, 7, 161);
+}
+
+div.form-group > label , 
+div.form-group > input {
+    display: block;
+    margin-bottom: 12px;
+    margin-left: 30px;
+}
+
+div.form-group:first-child {
+    padding-top: 30px;
+}
+
+label {
+    margin-left: 30px;
+}
+
+input{
+    padding: 6px 3px;
+    width: 90%;
+}
+input:invalid:focus  {
+  border: 2px solid rgb(0, 0, 0);
+  background-color: #ffe6e6;
+  outline: none;
+}
+
+input:valid {
+  border: 2px solid green;
+  background-color: #e6ffe6;
+}
+input[type="email"] {
+  border: 2px solid blue;
+  background-color: #e0f0ff;
+}
+
+.input-icon {
+  position: relative;
+  display: inline-block;
+  width: 90%;
+  margin-left: 30px;
+}
+
+.input-icon::before {
+  content: "🍔";
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%); /*Centra el icono verticalmente*/
+  pointer-events: none; /*impide que el icono bloquee el clic*/
+  font-size: 18px;
+}
+
+.input-icon input {
+  width: 100%;
+  padding: 6px 3px 6px 35px; /*Pone espacios siguiendo las manecillas del reloj, 6 arriba, 3 derecha, 6 abajo, 35 izquierda*/
+  box-sizing: border-box; /*Impide que el ancho del input se salga del limite establecido*/
+}
+
+button {
+    position: relative; /*Necesario para que ::after se posicione respecto al botón*/
+    z-index: 1; /*Asegura que el botón esté por encima de la sombra*/
+    display: block;
+    margin: 0 auto;
+    background-color: brown;
+    color: #fff;
+    border: 1px solid  brown; 
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 3s ease-in-out, color 3s ease-in-out, border 3s ease-in-out;
+}
+
+button.validar:hover {
+    background-color: #fff;
+    color: brown;
+    border: 1px solid brown; 
+    transition: background-color 8s, color 8s, border 8s;
+}
+
+button.validar::after {
+    content: ""; /*crea un pseudo-elemento vacio*/
+    position: absolute; /*Posiciona el pseudo-elemnto en relacion al boton*/
+    top: 5px; /*Desplaza el PsE 5px abajo*/  
+    left: 5px; /*Desplaza el PsE 5px a la derecha*/
+    width: 100%; /*Hace que el PsE tenga el mismo ancho que el boton*/
+    height: 100%; /*Hace que el PsE tenga la misma altura que el boton*/
+    background-color: rgba(0, 0, 0, 0.2); /*le pone un color de fondo a la sombra con transparencia*/
+    z-index: -1; /*Hace que la sombra quede detras del boton*/
+    border-radius: 10px; /*Hace que la sombra como el boton tengan las esquinas iguales*/
+}
+
+/* cambia el color de los labels seleccionados a verde*/
+label[for="nombre"] {
+  color: green;
+}
+label[for="apellidos"]{
+  color: green;
+}
+label[for="correo"]{
+  color: green;
+}
+
+/* modo oscuro del body */
+body.dark-mode {
+  background: black;
+}
+
+#dark-mode {
+    display: block;
+    margin: 10px auto 0 auto; /* 20px arriba para separar del formulario y centrado horizontalmente */
+}
+
+
+.btn-volver {
+    display: inline-block; 
+    padding: 10px 20px; /* separa el contenido del boton de su borde */
+    margin-top: 5px;  /* separa el boton de la caja de arriba */
+    background-color: rgba(2, 2, 2, 0.26); /* color del boton */
+    color: white; /* color del texto */
+    text-decoration: none; /* quita el subrayado de abajo */
+    border-radius: 8px; /* curva las esquinas */ 
+    font-weight: bold; /* el texto se pone en negrita */
+    transition: background-color 0.3s ease; /* cambia de color al pasar el cursor */
+}
+
+.btn-volver:hover {
+    background-color: rgb(71, 52, 49); /* cambia por este color al pasar el cursor */
+}
+
+@media (max-width: 64rem) {
+    body {
+        background-image: url('../Img/autumn.png');
+    }
+}
+
+
+@media (max-width: 48em) {
+    body {
+        background-image: url('../Img/summer.png');
+    }
+}
+
+@media (max-width: 37.5em) {
+
+    body {
+        background-image: url('../Img/spring.png');
+    }
+    form {
+        width: 90%; /* ocupa casi todo el ancho */
+        margin-top: 1.25em;
+        padding-bottom: 1.25rem;
+    }
+
+    div.form-group > label,
+    div.form-group > input,
+    .input-icon {
+        margin-left: 0; /* elimina el margen lateral */
+        width: 100%; /* los inputs ocupan todo el ancho */
+    }
+
+    input {
+        padding: 0.5rem 0,3125em; /* ajusta el padding para que se vea mejor */
+    }
+
+    button {
+        width: 65%; /* botón ocupa todo el ancho del form */
+        padding: 0.625remx;
+    }
+}

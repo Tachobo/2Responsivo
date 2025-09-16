@@ -1,0 +1,45 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  font-size: 25px; /* Tamaño base de texto para pc */
+}
+
+h1 {
+  font-size: 36px; /* Tamaño base de titulo para pc */
+}
+
+.btn-volver {
+  display: inline-block; 
+  padding: 10px 20px; /* separa el contenido del boton de su borde */
+  margin-top: 5px;  /* separa el boton de la caja de arriba */
+  background-color: rgba(2, 2, 2, 0.26); /* color del boton */
+  color: white; /* color del texto */
+  text-decoration: none; /* quita el subrayado de abajo */
+  border-radius: 8px; /* curva las esquinas */ 
+  font-weight: bold; /* el texto se pone en negrita */
+  transition: background-color 0.3s ease; /* cambia de color al pasar el cursor */
+}
+
+.btn-volver:hover {
+  background-color: rgb(71, 52, 49); /* cambia por este color al pasar el cursor */
+}
+
+@media (max-width: 962px) {
+  body {
+    font-size: 18px; /* Texto mediano  para tablet */
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 12px; /* Texto pequeño para moviles */
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+}

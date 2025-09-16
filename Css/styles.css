@@ -1,0 +1,70 @@
+/* De base el programa tendra estas configuraciones
+hasta 767px, despues de eso se aplicaran los demas */
+body {
+margin: 0;
+font-family: cursive;
+background-color: rgb(37, 0, 248);
+text-align: center;
+padding: 20px;
+}
+
+.box{
+background: white;
+padding: 20px;
+border-radius: 10px;
+margin: auto;
+width: 90%;
+}
+
+.btn-volver {
+  display: inline-block; 
+  padding: 10px 20px; /* separa el contenido del boton de su borde */
+  margin-top: 5px;  /* separa el boton de la caja de arriba */
+  background-color: rgba(2, 2, 2, 0.26); /* color del boton */
+  color: white; /* color del texto */
+  text-decoration: none; /* quita el subrayado de abajo */
+  border-radius: 8px; /* curva las esquinas */ 
+  font-weight: bold; /* el texto se pone en negrita */
+  transition: background-color 0.3s ease; /* cambia de color al pasar el cursor */
+}
+
+.btn-volver:hover {
+  background-color: rgb(71, 52, 49); /* cambia por este color al pasar el cursor */
+}
+/* Mobile first */
+
+/* se aplican esos cambios apartir de 768px */
+@media(min-width: 768px){
+    body{
+        background-color: rgb(184, 21, 0);
+    } 
+    .box{
+        width: 70%;
+        background: black;
+        color:white; 
+    }
+}
+
+/* se aplican esos cambios apartir de 992px */
+@media (min-width: 992px){
+    body {
+        background-color: rgb(87, 0, 87);
+    }
+    .box {
+        width: 50%;
+        background: violet;
+        color:aqua;
+    }
+}
+
+/* se aplican apartir de 1200px */
+@media (min-width:1200px){
+    body {
+        background-color: magenta;
+    }
+    .box {
+        width: 40%;
+        background:greenyellow;
+        color:blue;
+}
+}

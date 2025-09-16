@@ -1,0 +1,71 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    background:white;
+}
+
+.card {
+    display: inline-block;  /* se alinean en horizontal */
+    vertical-align: top;
+    width: 20%;  /* ancho en escritorio */
+    min-width: 200px;
+    margin: 10px;
+    background: rgba(32, 80, 119, 0.466);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.8);
+    }
+
+
+.card:hover {
+  transform: translateY(-10px); /* se mueve 10px hacia arriba, haciendo que salte la tarjeta */
+}
+
+.card h2 {
+    margin-top: 0;
+}
+
+.card p {
+    font-weight: bold;
+}
+
+.btn-volver {
+    display: inline-block; 
+    padding: 10px 20px; /* separa el contenido del boton de su borde */
+    margin-top: 5px;  /* separa el boton de la caja de arriba */
+    background-color: rgba(2, 2, 2, 0.26); /* color del boton */
+    color: white; /* color del texto */
+    text-decoration: none; /* quita el subrayado de abajo */
+    border-radius: 8px; /* curva las esquinas */ 
+    font-weight: bold; /* el texto se pone en negrita */
+    transition: background-color 0.3s ease; /* cambia de color al pasar el cursor */
+}
+
+.btn-volver:hover {
+    background-color: rgb(71, 52, 49); /* cambia por este color al pasar el cursor */
+}
+
+    /* se ponen en columna en moviles*/
+@media (max-width: 768px) {
+.card {
+    width: 90%; /* ocupan casi todo el ancho */
+    display: block; /* fuerza que se apilen */
+    margin: 30px auto; /* centra las tarjetas, y les da una separacion entre ellas */
+}
+}
+
+@media print {
+    body{
+    border: 1px solid black; /* le pone un borde solido, de un px de grosor, y de color negro
+    al rededor del body*/
+    }
+    .card{
+        background: rgba(32, 80, 119, 0.466) !important; /*Le dice al navegador que 
+        respete este color*/
+        -webkit-print-color-adjust: exact; /* indica al navegador que debe respetar los colores,
+        incluso los de fondo (chrome, safari)*/
+        print-color-adjust: exact; /* lo mismo que el de arriba, pero para los demas navegadores */
+    }
+}
