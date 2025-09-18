@@ -273,3 +273,18 @@ label::after {
   }
   
 }
+
+@media (max-width: 552px) {
+    .contenedor {
+    display: block; 
+    width: 100%;
+    margin: 0;
+  }
+
+  .presentacion, .formulario {
+    display: block; 
+    width: 100%;
+    padding: 3.5px;
+    border-radius: 0;
+  }
+}
